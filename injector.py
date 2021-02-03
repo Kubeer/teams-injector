@@ -31,7 +31,7 @@ async def findMainWindow():
             url = window['webSocketDebuggerUrl']
             try:
                 async with websockets.connect(url) as ws:
-                    await ws.send(json.dumps(getPayload('document.querySelectorAll(".item-wrap").length')))
+                    await ws.send(json.dumps(getPayload('document.querySelectorAll(".app-header-bar").length')))
                     r = await ws.recv()
                     if (json.loads(r) and json.loads(r)['result'] and json.loads(r)['result']['result'] and json.loads(r)['result']['result']['value'] and json.loads(r)['result']['result']['value'] > 0):
                         return url
