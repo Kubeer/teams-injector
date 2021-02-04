@@ -1,3 +1,4 @@
-./build
-./dist
-./__pycache__
+build/
+dist/
+__pycache__/
+injector.spec
