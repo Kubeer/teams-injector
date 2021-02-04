@@ -2,6 +2,12 @@
 
 Teams injector is an app designed to inject js code to Teams desktop app.
 
+## Requirements
+
+To build the app you will need the following libraries:
+* `websockets`
+* `requests`
+
 ## Building
 
 To build the app you will need pyinstaller which can be downloaded using `pip install pyinstaller`.
