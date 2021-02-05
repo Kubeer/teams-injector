@@ -13,3 +13,8 @@ document.styleSheets[0].insertRule(".contentContainer-48::-webkit-scrollbar {dis
 document.styleSheets[0].insertRule(".node_modules--msteams-bridges-components-calendar-grid-dist-es-src-renderers-grid-line-renderer-grid-line-renderer__gridLineContainer--1OJHY *{background: transparent !important;}");
 document.styleSheets[0].insertRule(".node_modules--msteams-bridges-components-calendar-grid-dist-es-src-renderers-grid-line-renderer-grid-line-renderer__gridLineContainer--1OJHY{background: transparent !important;}");
 document.styleSheets[0].insertRule('.node_modules--msteams-bridges-components-calendar-grid-dist-es-src-containers-calendar-grid-container-calendar-grid-container__calendarGridContainer--291Hk.node_modules--msteams-bridges-components-calendar-grid-dist-es-src-containers-calendar-grid-container-calendar-grid-container__flexFill--Oa0UA::before {content:"";top:0;left:0;width:100%;height:100%;position:absolute;background:url("'+CALENDAR_BACKGROUND+'") center / cover no-repeat;filter:brightness(0.5);}');
+document.styleSheets[0].insertRule(".ts-embedded-container{background: transparent !important;}");
+document.styleSheets[0].insertRule(".files-list-repeat-container{background: transparent !important;}");
+document.styleSheets[0].insertRule(".files-list-repeat-container div div{background: transparent !important;}");
+document.styleSheets[0].insertRule(".ts-table .tbody .tr{border: none !important;}")
+document.styleSheets[0].insertRule('.ts-middle-stars-tab-stripe::before {content:"";top:0;left:0;width:100%;height:100%;position:absolute;background:url("'+MAIN_BACKGROUND+'");background-size:cover;filter:brightness(0.5);}');
