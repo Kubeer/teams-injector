@@ -2,6 +2,14 @@
 
 Teams injector is an app designed to inject js code to Teams desktop app.
 
+## Screenshots
+![image](https://user-images.githubusercontent.com/47148920/109078904-6e588d80-76fe-11eb-8a72-e45011311792.png)
+
+![image](https://user-images.githubusercontent.com/47148920/109079102-bb3c6400-76fe-11eb-82ac-1e4b2d6296e9.png)
+
+![image](https://user-images.githubusercontent.com/47148920/109079403-3140cb00-76ff-11eb-9e08-e215159a3def.png)
+
+
 ## Requirements
 
 To build the app you will need the following libraries:
