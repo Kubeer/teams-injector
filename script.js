@@ -177,6 +177,8 @@ var contentTemplate = `
 						<div class="form-field-input generic-edit-button" style="margin-top: 2.5rem;">
 							<button class="ts-btn ts-btn-fluent ts-btn-fluent-secondary" id="injectorApplyButton">Apply</button>
 						</div>
+						<hr aria-hidden="true" class="device-settings-partition">
+						<div class="manage-text">Icons made by Freepik from www.flaticon.com</div>
 					</div>
 				</div>
 			</div>
