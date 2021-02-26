@@ -203,19 +203,19 @@ function itemClicked(e) {
 
 // Applying changes
 function applyClicked() {
-	var main = rightInjectorContent.querySelector("#mainBckgInput").value;
-	var side = rightInjectorContent.querySelector("#sidebarBckgInput").value;
-	var calendar = rightInjectorContent.querySelector("#calendarBckgInput").value;
-	styleSheet.rules[0].style.backgroundImage = 'url("'+main+'")';
-	styleSheet.rules[10].style.backgroundImage = 'url("'+main+'")';
-	styleSheet.rules[14].style.backgroundImage = 'url("'+main+'")';
+	MAIN_BACKGROUND = rightInjectorContent.querySelector("#mainBckgInput").value;
+	SIDE_BACKGROUND = rightInjectorContent.querySelector("#sidebarBckgInput").value;
+	CALENDAR_BACKGROUND = rightInjectorContent.querySelector("#calendarBckgInput").value;
+	styleSheet.rules[0].style.backgroundImage = 'url("'+MAIN_BACKGROUND+'")';
+	styleSheet.rules[10].style.backgroundImage = 'url("'+MAIN_BACKGROUND+'")';
+	styleSheet.rules[14].style.backgroundImage = 'url("'+MAIN_BACKGROUND+'")';
 	
-	styleSheet.rules[5].style.backgroundImage = 'url("'+calendar+'")';
-	styleSheet.rules[9].style.backgroundImage = 'url("'+side+'")';
+	styleSheet.rules[5].style.backgroundImage = 'url("'+CALENDAR_BACKGROUND+'")';
+	styleSheet.rules[9].style.backgroundImage = 'url("'+SIDE_BACKGROUND+'")';
 	
-	setCookie("mainBackground", main);
-	setCookie("sideBackground", side);
-	setCookie("calendarBackground", calendar);
+	setCookie("mainBackground", MAIN_BACKGROUND);
+	setCookie("sideBackground", SIDE_BACKGROUND);
+	setCookie("calendarBackground", CALENDAR_BACKGROUND);
 }
 
 // Observing for settings dialog box
