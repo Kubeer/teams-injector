@@ -37,7 +37,7 @@ var MAIN_BACKGROUND, SIDE_BACKGROUND, CALENDAR_BACKGROUND;
 if (getCookie("mainBackground") === undefined) {
 	setCookie("mainBackground", "https://media1.tenor.com/images/79a1d6b4607203809a36b8ca27d3c6ef/tenor.gif");
 	setCookie("sideBackground", "https://i.imgur.com/QEIpGEC.gif");
-	setCookie("calendarBackground", "https://i.imgur.com/0ofQAW6.jpeg");
+	setCookie("calendarBackground", "https://i.imgur.com/uZnn6TE.jpeg");
 }
 MAIN_BACKGROUND = getCookie("mainBackground");
 SIDE_BACKGROUND = getCookie("sideBackground");
@@ -58,13 +58,6 @@ styleSheet.insertRule(".root_b545fc9a div{background: transparent !important;}")
 styleSheet.insertRule('.ms-ScrollablePane::before {content:"";top:0;left:0;width:100%;height:100%;position:absolute;background:url("'+MAIN_BACKGROUND+'");background-size:cover;filter:brightness(0.5);}');
 // Apply background to sidebar
 styleSheet.insertRule('.ts-channel-list::before {content:"";top:0;left:0;width:100%;height:100%;position:absolute;background:url("'+SIDE_BACKGROUND+'") center / cover no-repeat;filter:brightness(0.5);}');
-
-// Hide elements in calendar tab so background is visible
-styleSheet.insertRule(".contentContainer-48::-webkit-scrollbar {display: none;}");
-styleSheet.insertRule(".node_modules--msteams-bridges-components-calendar-grid-dist-es-src-renderers-grid-line-renderer-grid-line-renderer__gridLineContainer--1OJHY *{background: transparent !important;}");
-styleSheet.insertRule(".node_modules--msteams-bridges-components-calendar-grid-dist-es-src-renderers-grid-line-renderer-grid-line-renderer__gridLineContainer--1OJHY{background: transparent !important;}");
-// Apply background image to calendar tab
-styleSheet.insertRule('.node_modules--msteams-bridges-components-calendar-grid-dist-es-src-containers-calendar-grid-container-calendar-grid-container__calendarGridContainer--291Hk.node_modules--msteams-bridges-components-calendar-grid-dist-es-src-containers-calendar-grid-container-calendar-grid-container__flexFill--Oa0UA::before {content:"";top:0;left:0;width:100%;height:100%;position:absolute;background:url("'+CALENDAR_BACKGROUND+'") center / cover no-repeat;filter:brightness(0.5);}');
 
 // Hide elements in files sidebar tab so background is visible
 styleSheet.insertRule(".ts-embedded-container{background: transparent !important;}");
@@ -207,11 +200,11 @@ function applyClicked() {
 	SIDE_BACKGROUND = rightInjectorContent.querySelector("#sidebarBckgInput").value;
 	CALENDAR_BACKGROUND = rightInjectorContent.querySelector("#calendarBckgInput").value;
 	styleSheet.rules[0].style.backgroundImage = 'url("'+MAIN_BACKGROUND+'")';
+	styleSheet.rules[6].style.backgroundImage = 'url("'+MAIN_BACKGROUND+'")';
 	styleSheet.rules[10].style.backgroundImage = 'url("'+MAIN_BACKGROUND+'")';
-	styleSheet.rules[14].style.backgroundImage = 'url("'+MAIN_BACKGROUND+'")';
 	
-	styleSheet.rules[5].style.backgroundImage = 'url("'+CALENDAR_BACKGROUND+'")';
-	styleSheet.rules[9].style.backgroundImage = 'url("'+SIDE_BACKGROUND+'")';
+	//styleSheet.rules[5].style.backgroundImage = 'url("'+CALENDAR_BACKGROUND+'")';
+	styleSheet.rules[5].style.backgroundImage = 'url("'+SIDE_BACKGROUND+'")';
 	
 	setCookie("mainBackground", MAIN_BACKGROUND);
 	setCookie("sideBackground", SIDE_BACKGROUND);
