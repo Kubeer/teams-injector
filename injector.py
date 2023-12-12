@@ -4,6 +4,7 @@ import asyncio
 import json
 import subprocess
 import time
+import sys
 
 windows_endpoint = 'http://localhost:9222/json'
 SCRIPT_PATH = 'script.js'
@@ -24,7 +25,7 @@ async def findMainWindow():
                 return -1
         except Exception as e:
             print(e)
-            pass
+            continue
         windows = res.json()
         for window in windows:
             url = window['webSocketDebuggerUrl']
@@ -47,7 +48,7 @@ async def findContentWindow():
                 return -1
         except Exception as e:
             print(e)
-            pass
+            continue
         windows = res.json()
         for window in windows:
             url = window['webSocketDebuggerUrl']
@@ -84,11 +85,14 @@ async def injectScript(windowUrl, scriptPath):
         print(e)
             
 if __name__ == "__main__":
-    try:
-        subprocess.Popen(['Teams_o.exe', '--remote-debugging-port=9222'])
-    except Exception as e:
-        raise Exception(e)
-    time.sleep(5)
+    if (len(sys.argv) > 1 and sys.argv[1] == "inject"):
+        pass
+    else:
+        try:
+            subprocess.Popen(['Teams_o.exe', '--remote-debugging-port=9222'])
+        except Exception as e:
+            raise Exception(e)
+        time.sleep(5)
     
     loop = asyncio.get_event_loop()
     print('Trying to find main window...')
