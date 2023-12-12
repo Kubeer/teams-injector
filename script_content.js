@@ -38,9 +38,9 @@ CALENDAR_BACKGROUND = getCookie("calendarBackground");
 var styleSheet = document.styleSheets[0];
 
 // Apply background image to calendar tab
-styleSheet.insertRule('.f1ctqxl6 {background: transparent !important;}')
-styleSheet.insertRule('.f16xq7d1 {background: transparent !important;}')
-styleSheet.insertRule('.ui-flex.bf.nf.rn.ng, .ui-flex.bg.bh.blx.bih {background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("'+CALENDAR_BACKGROUND+'") center / cover no-repeat;}')
+styleSheet.insertRule('div.fui-Flex[telemetryset=true] > div ~ div > div ~ div > div > div ~ div > * > div > * {background: transparent !important;}')
+styleSheet.insertRule('div.fui-Flex[telemetryset=true] > div ~ div > div ~ div > div > div ~ div > * > div {background: transparent !important;}')
+styleSheet.insertRule('div.fui-Flex[telemetryset=true] > div ~ div > div ~ div {background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("'+CALENDAR_BACKGROUND+'") center / cover no-repeat;}')
 
 // Apply background image to chat tab
 styleSheet.insertRule('div#message-pane-layout-a11y {background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("'+MAIN_BACKGROUND+'") center / cover no-repeat;}')
